@@ -10,5 +10,6 @@ if(!$login)
 else {
 	session_regenerate_id();
 	$_SESSION['cuid'] = $_POST['user'];
+	createfolders();
 	header("location: /admin/home");
 }

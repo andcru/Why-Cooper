@@ -10,6 +10,7 @@
 	<script src="/js/ajaxfileupload.js"></script>
 	<script src="/js/admin.js"></script>
 <?php endif; ?>
+        <script src="/js/google.js"></script>
         <link rel="stylesheet" type="text/css" href="/css/main.css">
     </head>
     <body>

@@ -109,3 +109,13 @@ function shrink($name,$ext,$desired_width,$desired_height) {
 	imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);	
 	$save_fn($virtual_image, $_SERVER['DOCUMENT_ROOT'].$path.'/i/'.$filename.'_'.$desired_width.'x'.$desired_height.'.'.$ext);
 }
+
+function createfolders() {
+	$user_root = dirname(__FILE__) . '/users/' . $_SESSION['cuid'] . '/';
+	if(@!file_exists($user_root . 'uploads/i/')) {
+		mkdir($user_root);
+		mkdir($user_root . 'uploads/');
+		mkdir($user_root . 'uploads/t/');
+		mkdir($user_root . 'uploads/i/',0777);
+	}
+}
