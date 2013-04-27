@@ -1,0 +1,20 @@
+Options +SymLinksIfOwnerMatch
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^(.*)\/(\?.*)?$ $1$2 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} \.php$
+RewriteCond %{REQUEST_FILENAME} !/index\.php$
+RewriteCond %{REQUEST_FILENAME} !/?-e?\.php$
+RewriteCond %{REQUEST_FILENAME} !/?-a?\.php$
+RewriteCond %{REQUEST_FILENAME} !/?-f?\.php$
+RewriteCond %{REQUEST_FILENAME} !/?-f?\.js\.php$
+RewriteRule ^(.+).php$ /$1 [R=301,NC]
+
+RewriteRule ^([0-9a-zA-Z\/]*)$ index.php?p=$1 [L]
+
+php_value upload_max_filesize 500M
+php_value post_max_size 500M
+php_value max_execution_time 200
+php_value max_input_time 200
