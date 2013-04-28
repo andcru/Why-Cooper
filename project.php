@@ -7,7 +7,7 @@ $stud = new student($proj['cuid']);
 
 <p><b>Student: <?php echo $stud->name(); ?></b></p>
 
-<p>Image: <img src="/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>"></p>
+<p>Image: <img src="/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>" width="300px" height="200px"></p>
 
 <p>Project Description:</p>
 
