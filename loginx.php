@@ -9,7 +9,7 @@ if(!$login)
 	exit_no('Username and/or password invalid.');
 else {
 	session_regenerate_id();
-	$_SESSION['cuid'] = $_POST['user'];
+	$_SESSION['cuid'] = strtolower($_POST['user']);
 	createfolders();
 	header("location: /admin/home");
 }
