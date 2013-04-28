@@ -15,3 +15,4 @@
     </head>
     <body>
         <div id="content" class="container">
+<?php include('errors.php'); ?>

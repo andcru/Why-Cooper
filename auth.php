@@ -1,6 +1,10 @@
 <?php
 
 $pg = explode("/",$_GET['p']);
+if(is_numeric($pg[sizeof($pg)-1])) {
+	$pg_id = array_pop($pg);
+	$_GET['p'] = implode("/",$pg);
+}
 if(!$pg[0])
 	$_GET['p'] = 'home';
 
