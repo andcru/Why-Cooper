@@ -2,11 +2,10 @@
 include_once($_SERVER['DOCUMENT_ROOT'].'/admin/imagex.php');
 
 $r = $_POST;
-$members = array();
 
-$mem = implode(",",$members);
+$except = array('members');
 
-notblank($r);
+notblank($r,$except);
 
 $r['page'] = imageShrink($r['page']);
 
@@ -16,7 +15,7 @@ $main_photo = $stmt->insert_id;
 
 $qry = "INSERT INTO projects (title,content,photo,cuid,members) VALUES (?,?,?,?,?)";
 $stmt = $dbc->prepare($qry);
-$stmt->bind_param('ssdss',$r['title'],$r['page'],$main_photo,$_SESSION['cuid'],$mem);
+$stmt->bind_param('ssdss',$r['title'],$r['page'],$main_photo,$_SESSION['cuid'],$_POST['members']);
 $stmt->execute();
 
 exit_yes('Page submitted successfully!',"/admin/home");
