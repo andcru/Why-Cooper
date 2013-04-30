@@ -4,7 +4,7 @@
         <title>Why Cooper Union?</title>
         <script src="/js/jquery-1.8.0.min.js"></script>
         <script src="/js/isotope/jquery.isotope.min.js"></script>
-        <script src="/js/isotope.js"></script>
+        <script src="/js/showcase.js"></script>
 <?php if($_SESSION['cuid']): ?>
 	<script src="/js/tiny_mce/jquery.tinymce.js"></script>
 	<script src="/js/tiny_mce/tiny_mce.js"></script>
