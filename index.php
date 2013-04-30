@@ -16,3 +16,6 @@ if(file_exists($_SERVER['DOCUMENT_ROOT'].'/'.$_GET['p'].'.php'))
 	include_once($_SERVER['DOCUMENT_ROOT'].'/'.$_GET['p'].'.php');
 else
 	include_once($_SERVER['DOCUMENT_ROOT'].'/dne.php');
+
+if(substr($_GET['p'],-1,1) != 'x')
+	include( dirname(__FILE__) . '/footer.php' );

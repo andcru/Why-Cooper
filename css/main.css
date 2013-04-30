@@ -1,7 +1,197 @@
-#content {
-	width:800px;
+html{
+	padding:0;
+	margin:0;
+	height:100%;
+}
+body{
+	padding:0;
+	margin:0;	
+	background-image:url('/img/background.png');
+	height:100%;
+}
+.wrapper{
+	width:980px;
+	min-height:100%;
+	height:auto !important;
+	margin:0 auto -73px;
+	background-color:white;
+}
+.container{
+	width:940px;
+	padding:0;
+	margin:20px auto;
+	position:relative;
+}
+.container:last-child{
+	padding-bottom:53px;
+}
+#header{
+	width:980px;
+	padding:0;
+	margin:0 auto;
+	height:194px;
+}
+#footer{
+	width:980px;
+	background-color:#111;
+	height:53px;
+	padding:0;
+	margin:0 auto;
 }
 
-a:hover {
-	cursor:pointer;
+#header ul{
+	margin:0;
+	padding:0;
+	position:absolute;
+	bottom:0;
+	left:0;
+	height:62px;
 }
+#header ul li{
+	position:relative;
+	float:left;
+	list-style:none;
+	padding:0;
+	margin:0;
+	height:62px;
+	width:130px;
+}
+#header ul li.short{
+	width:129px;
+}
+a.nav-link{
+	position:absolute;
+	display:block;
+	bottom:0;
+	width:130px;
+	height:45px;
+	background-image:url('/img/navsprite.png');
+	vertical-align:bottom;
+}
+
+#page_home{
+	background-position:0px 0px;
+}
+#page_statement{
+	background-position:-130px 0px;
+}
+#page_features{
+	background-position:-260px 0px;
+}
+#page_showcase{
+	background-position:-390px 0px;
+}
+#page_experiences{
+	background-position:-520px 0px;
+}
+#page_press{
+	width:129px;
+	background-position:-650px 0px;
+}
+#page_home:hover{
+	background-position:0 45px;
+}
+#page_statement:hover{
+	background-position:-130px 45px;
+}
+#page_features:hover{
+	background-position:-260px 45px;
+}
+#page_showcase:hover{
+	background-position:-390px 45px;
+}
+#page_experiences:hover{
+	background-position:-520px 45px;
+}
+#page_press:hover{
+	background-position:-650px 45px;
+}
+#page_support{
+	background-image:url('/img/supportsprite.png');
+	background-position:0px 0px;
+	height:62px;
+	width:201px;
+}
+#page_support:hover{
+	background-position:0px 62px;
+}
+
+#footer ul{
+	position:relative;
+	margin:0;
+	padding:0;
+	height:53px;
+}
+#footer ul li{
+	position:relative;
+	float:left;
+	list-style:none;
+	padding:0;
+	margin:0;
+	height:53px;
+	width:110px;
+}
+#footer ul li.foot-wide{
+	width:160px;
+}
+a.foot-link{
+	position:absolute;
+	display:block;
+	bottom:0;
+	height:53px;
+	width:100%;
+	background-image:url('/img/footersprite.png');
+	vertical-align:bottom;
+}
+#foot_main{
+	background-position:0px 0px;
+}
+#foot_home{
+	background-position:-160px 0px;
+}
+#foot_statement{
+	width:129px;
+	background-position:-270px 0px;
+}
+#foot_features{
+	background-position:-380px 0px;
+}
+#foot_showcase{
+	background-position:-490px 0px;
+}
+#foot_experiences{
+	background-position:-600px 0px;
+}
+#foot_press{
+	background-position:-710px 0px;
+}
+#foot_support{
+	background-position:-820px 0px;
+}
+#foot_main:hover{
+	background-position:0px 53px;
+}
+#foot_home:hover{
+	background-position:-190px 53px;
+}
+#foot_statement:hover{
+	width:129px;
+	background-position:-290px 53px;
+}
+#foot_features:hover{
+	background-position:-390px 53px;
+}
+#foot_showcase:hover{
+	background-position:-490px 53px;
+}
+#foot_experiences:hover{
+	background-position:-590x 53px;
+}
+#foot_press:hover{
+	background-position:-690px 53px;
+}
+#foot_support:hover{
+	background-position:-790px 53px;
+}
+
+
