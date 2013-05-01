@@ -13,9 +13,9 @@
 <?php
 $cont = array('crudge','o2','palafo','sanabr','zukofs');
 
-foreach($cont as $k => $cuid) {
+foreach($cont as $cuid) {
 	$stud = new student($cuid);
-	echo sprintf("<b>%s</b> - %s, Class %d<br/>",$stud->name(), $stud->maj(1), $stud->year, $resp[$k]);
+	echo sprintf("<b>%s</b> - %s, Class %d<br/>",$stud->name(), $stud->maj(1), $stud->year);
 }
 ?>
 
