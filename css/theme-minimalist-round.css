@@ -11,7 +11,7 @@
 	height: 380px;
 	list-style: none;
 	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
-	overflow-y: auto;
+	overflow-y: hidden;
 	overflow-x: hidden;
 }
 

@@ -9,15 +9,16 @@ var options = {
 $(document).ready(function() {
 
 	$('#imgslider').anythingSlider({
-	    theme               : "minimalist-round", // Theme name
-	    buildArrows         : false,      // If true, builds the forwards and backwards buttons
-	    buildStartStop      : false,      // If true, builds the start/stop button and adds slideshow functionality
-	    hashTags            : false,      // Should links change the hashtag in the URL?
-	    autoPlay            : true,     // If true, the slideshow will start running; replaces "startStopped" option
-	    autoPlayLocked      : true,     // If true, user changing slides will not stop the slideshow
-	    delay               : 4000,      // How long between slideshow transitions in AutoPlay mode (in milliseconds)
-	    resumeDelay         : 4000,     // Resume slideshow after user interaction, only if autoplayLocked is true (in milliseconds).
-	    animationTime       : 500,       // How long the slideshow transition takes (in milliseconds)
+	    theme               : "minimalist-round",
+	   	startPanel			: function(){ return Math.ceil(Math.random()*5); },
+	    buildArrows         : false,
+	    buildStartStop      : false,
+	    hashTags            : false,
+	    autoPlay            : true, 
+	    autoPlayLocked      : true, 
+	    delay               : 4000, 
+	    resumeDelay         : 4000, 
+	    animationTime       : 500,
 	    navigationFormatter : function(i,p){ return p.attr('data-title'); }
    	});
 

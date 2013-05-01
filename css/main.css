@@ -243,6 +243,9 @@ div.img-feat-crop{
 	background-color:#d9d9d9;
 	cursor:pointer;
 }
+.student_project.highlight-project{
+	background-color:#eee;
+}
 div.img-showcase-crop{
 	height:140px;
 	width:270px;

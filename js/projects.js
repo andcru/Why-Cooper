@@ -19,6 +19,10 @@ $(document).ready(function() {
 	});
 	$("#all_projects").on("click",".student_project", function() {
 		window.location = '/project/'+$(this).attr('pid');
+	}).on("mouseenter",".student_project", function(){
+		$(this).addClass('highlight-project');
+	}).on("mouseleave",".student_project", function(){
+		$(this).removeClass('highlight-project');
 	});
 });
 
