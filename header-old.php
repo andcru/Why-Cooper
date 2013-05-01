@@ -25,12 +25,13 @@
         <div class="container" id="header">
             <img src="/img/head.png">
             <ul>
-                <li><a href="/home"        class="nav-link">Home</a></li>
-                <li><a href="/statement"   class="nav-link">Statement</a></li>
-                <li><a href="/projects"    class="nav-link">Projects</a></li>
-                <li><a href="/featured"    class="nav-link">Featured</a></li>
-                <li><a href="/experiences" class="nav-link">Experiences</a></li>
-                <li><a href="/support"     class="nav-link">Support Us</a></li>
+                <li><a href="/home"        class="nav-link" id="page_home">       </a></li>
+                <li><a href="/statement"   class="nav-link" id="page_statement">  </a></li>
+                <li><a href="/features"    class="nav-link" id="page_features">   </a></li>
+                <li><a href="/showcase"    class="nav-link" id="page_showcase">   </a></li>
+                <li><a href="/experiences" class="nav-link" id="page_experiences"></a></li>
+                <li><a href="/press"       class="nav-link" id="page_press">      </a></li>
+                <li><a href="/support"     class="nav-link" id="page_support">    </a></li>
             </ul>
         </div>
         <div class="container">

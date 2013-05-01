@@ -2,29 +2,43 @@
 <div class="home-col1">
 	<div class="home-box">
 		<h1>Check out the story of Cooper Union - told by its students</h1>
-		<p>The Cooper Union for the Advancement of Science and Art, commonly referred to simply as Cooper Union, is a privately funded college in the East Village neighborhood of Manhattan, New York City, located at Cooper Square and Astor Place. Founded in 1859, and inspired in 1830 when Peter Cooper learned about the government-supported École Polytechnique of Paris,[4][5] the school established a radical new model of American higher education: its mission reflects founder Peter Cooper's fundamental belief that an education "equal to the best"[6] should be accessible to those who qualify, independent of their race, religion, sex, wealth or social status, and should be "open and free to all".[7] The Cooper Union previously granted each admitted student a full-tuition scholarship; as of April 23, 2013, due to financial concerns, that policy has been eliminated. [8]</p>
-		<p>The college is divided into three schools: the Irwin S. Chanin School of Architecture, the School of Art, and the Albert Nerken School of Engineering. It offers undergraduate and Master's degree programs exclusively in the fields of architecture, fine arts, and engineering. It is a member of the Accreditation Board for Engineering and Technology (ABET) and the Association of Independent Colleges of Art and Design (AICAD). Cooper is considered to be one of the most prestigious colleges in the United States, with all three of its member schools consistently ranked among the highest in the country.[9] Dr. Jamshed Bharucha has succeeded George Campbell Jr. as the college’s twelfth president.</p>
+		<ul id="imgslider">
+			<li data-title="Image1"><img src="http://placehold.it/600x380/000000"></li>
+			<li data-title="Image2"><img src="http://placehold.it/600x380/222222"></li>
+			<li data-title="Image3"><img src="http://placehold.it/600x380/444444"></li>
+			<li data-title="Image4"><img src="http://placehold.it/600x380/666666"></li>
+			<li data-title="Image5"><img src="http://placehold.it/600x380/888888"></li>
+		</ul>
+	</div>	
+	<div class="home-box">
+		<h1>WhyCooper.org <span class="hl-gray">| Our Mission</span></h1>
+		<p>What would you do if there was a place where your economic situation didn't limit your opportunities?  What would happen if hundreds of people were put in an environment like this and their success was only determined by their own effort?  There is one last place that offers this, but you might not yet know it.  The Cooper Union for the Advancement of Science and Art is one of the last free colleges in the U.S.  WhyCooper.org was made to show the world what can come from such an environment and why we are so proud to be students at this institution.
+</p>
+	</div>
+</div><div class="home-col2"> <!--Important: do not put on new line, there must be no space between these 2 div's -->
+	<div class="home-box">
+		<?php
+		$proj = $dbc->query("SELECT projects.id,title,projects.cuid,name AS photo,members FROM projects JOIN files ON projects.photo = files.id ORDER BY ranking DESC, id DESC LIMIT 1")->fetch_assoc();
+		$stud = new student($proj['cuid']);
+		$proj['student'] = $stud->name().' ('.$stud->maj(0,0,1).' '.$stud->year.')';
+		?>
+		<h2 class="hl-gray">FEATURED STUDENT PROJECT</h2>
+		<div class="img-showcase-crop" style="background-image:url('http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/t/<?php echo $proj['photo']; ?>');"></div>
+		<h3 class="hl-red feature"><?php echo $proj['title']; ?></h3>
+		<p><?php echo $proj['student']; ?></p>
+		<a class="readmore" href="/project/<?php echo $proj['id']; ?>">view project</a>
 	</div>
 	<div class="home-box">
-		<h1>WhyCooper.org | Our Mission</h1>
-		<p>Through outstanding academic programs in architecture, art and engineering, and a Faculty of Humanities and Social Sciences, The Cooper Union for the Advancement of Science and Art prepares talented students to make enlightened contributions to society.</p>
-	</div>
-</div>
-<div class="home-col2">
-	<div class="home-box">
-		<h2>FEATURED STUDENT PROJECT</h2>
-		<p class="hl-red">Student Project Title</p>
-		<p>Through outstanding academic programs in architecture, art and engineering, and a Faculty of Humanities and Social Sciences, The Cooper Union for the Advancement of Science and Art prepares talented students to make enlightened contributions to society.</p>
+		<h2 class="hl-gray">FEATURED COOPER ALUMNI</h2>
+		<div class="img-feat-crop"><img src="http://placehold.it/270x140"></div>
+		<h3 class="hl-red feature">Alumni Name</h3>
+		<p>Job Title</p>
+		<a class="readmore" href="#">view alumnus</a>
 	</div>
 	<div class="home-box">
-		<h2>FEATURED COOPER ALUMNI</h2>
-		<p class="hl-red">Peter Cooper</p>
-		<p>Through outstanding academic programs in architecture, art and engineering, and a Faculty of Humanities and Social Sciences, The Cooper Union for the Advancement of Science and Art prepares talented students to make enlightened contributions to society.</p>
-	</div>
-	<div class="home-box">
-		<h2>FEATURED COOPER EXPERIENCE</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit mollis varius. Etiam ornare placerat massa, <br> 
-		<p class="hl-red text-right">- Peter Cooper</p>
-		</p>
+		<h2 class="hl-gray">FEATURED COOPER EXPERIENCE</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit mollis varius. Etiam ornare placerat massa.</p> 
+		<h3 class="hl-red text-right">- Writer Name</h3>
+		<a class="readmore" href="#">view more</a>
 	</h2>
 </div>

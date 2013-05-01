@@ -38,8 +38,15 @@ if(@$arr) {
 
 	$image = 0;
 	if(in_array(strtolower($file[1]),$img_ext)) {
-		make_thumb($arr['name'],'75',$file[1]);
 		$size = getimagesize($_SERVER['DOCUMENT_ROOT'] . '/users/' . $_SESSION['cuid'] .'/uploads/' . $arr['name']);
+		if($cont)
+			if($size[0] / $size[1] >= 270/140)
+				$w = 140 * $size[0] / $size[1];
+			else
+				$w = 270;
+		else
+			$w = 75;
+		make_thumb($arr['name'],$w,$file[1]);
 		$sizes = ','.$size['0'].','.$size['1'];
 		$image = 1;
 	}

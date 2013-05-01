@@ -17,6 +17,6 @@ while($row = $res->fetch_assoc()) {
 	}
 	else 
 		$img = '/img/file.png';
-	echo "<tr id='{$_SESSION['cuid']}/uploads/{$row['name']}".@$sizes."' class='imgselect'><td><img src='{$img}'></td><td>{$row['name']}</td></tr>";
+	echo "<tr id='{$_SESSION['cuid']}/uploads/{$row['name']}".@$sizes."' class='imgselect'><td><img style='width:75px' src='{$img}'></td><td>{$row['name']}</td></tr>";
 }
 ?>

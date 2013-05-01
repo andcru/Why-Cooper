@@ -64,7 +64,7 @@ function make_thumb($src, $desired_width,$ext) {
 			break;
 	}
 
-	$source_image = $create_fn( dirname(__FILE__) . '/users/' . $_SESSION['cuid'] .'/uploads/' . $src);
+	$source_image = $create_fn( $_SERVER['DOCUMENT_ROOT']. '/' . $_SESSION['cuid'] .'/uploads/' . $src);
 	$width = imagesx($source_image);
 	$height = imagesy($source_image);
 	
@@ -76,7 +76,7 @@ function make_thumb($src, $desired_width,$ext) {
 
 	$file = explode(".",$src);
 	
-	$save_fn($virtual_image, dirname(__FILE__) . '/users/' . $_SESSION['cuid'] .'/uploads/t/' . $file['0'] .'.'. $file['1']);
+	$save_fn($virtual_image, $_SERVER['DOCUMENT_ROOT']. '/' . $_SESSION['cuid'] .'/uploads/t/' . $file['0'] .'.'. $file['1']);
 }
 
 function shrink($name,$ext,$desired_width,$desired_height) {
