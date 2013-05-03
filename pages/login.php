@@ -13,3 +13,5 @@
 <input type="password" name="pass" tabindex="2">
 
 <input type="submit" tabindex="3">
+<br/><br/>
+<p><b>Note: </b>If you are a member of the Cooper community but do not have a current Webmail account, please contact us at webmaster@whycooper.org and we will create accounts on a case-by-case basis.</p>

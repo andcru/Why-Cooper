@@ -17,7 +17,7 @@
 	<script src="/js/ajaxfileupload.js"></script>
 	<script src="/js/admin.js"></script>
 <?php endif; ?>
-        <script src="/js/google.js"></script>
+        <script src="/js/social_media.js"></script>
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <link rel="stylesheet" type="text/css" href="/css/isotope.css">
         <link rel="stylesheet" type="text/css" href="/css/theme-minimalist-round.css">
@@ -36,5 +36,6 @@
                 <li><a href="/support"     class="nav-link">Support Us</a></li>
             </ul>
         </div>
+        <div id="fb-root"></div>
         <div class="container">
 <?php include('errors.php'); ?>
