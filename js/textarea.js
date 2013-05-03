@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 function loadMCE() {
-	$('textarea').tinymce({
+	$('textarea:not(.plain)').tinymce({
 		// Location of TinyMCE script
 		script_url : '/js/tiny_mce/tiny_mce.js',
 		inlinepopups_skin : 'ribbon_popup',

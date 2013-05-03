@@ -159,7 +159,15 @@ a.foot-link:hover span{
 	color:white;
 }
 
+ul.suc {
+	font-weight:bold;
+	color: #00cc22;
+}
 
+ul.err {
+	font-weight:bold;
+	color: #cc0000;
+}
 
 /* Utility Classes */
 .pull-right{
@@ -416,4 +424,90 @@ ul.alumni span{
 
 #all_experiences{
 	margin:20px -10px;
+}
+
+.testimonial_input {
+	width:100%;
+	height:180px;
+	resize: none;
+}
+
+/* Project page */
+
+.singleProjectTitle {
+	color: green;
+}
+
+.projectSchool {
+	float: right;
+	margin-top: -30px;
+}
+
+.projectMainContent {
+	padding: 20px;
+	position: relative;
+	margin: auto;
+	margin-top: 20px;
+	width: 700px;
+	background-color: #F0F0F0;
+}
+
+.projectImage {
+	position: relative;
+	left: 50%;
+	margin-left: -270px;
+
+}
+
+.projectDescription {
+}
+
+.suggestedProjectContent {
+	margin: auto;
+	margin-top: 20px;
+	margin-left: -20px;
+	position: relative;
+	width: 980px;
+	height: 340px;
+
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: gray;
+
+	background-color: #F0F0F0;
+
+}
+
+.suggestedProject {
+	position:relative;
+	float: left;
+	padding: 20px;
+	margin: 20px 0px 20px 20px;
+	width: 250px;
+	height: 220px;
+	background-color: #d9d9d9;
+}
+
+.similarProjectTitle {
+	padding-top: 20px;
+	position: relative;
+	left: 50%;
+	margin-left: -140px;
+}
+
+.suggestedProjectImage {
+	width: 250px;
+	height: 100px;
+	padding-bottom: 10px;
+}
+
+.suggestedProjectDescription {
+	font-size: 13px;
+}
+
+
+.imageContainer {
+	width: 250px;
+	height: 120px;
+	overflow: hidden;
 }

@@ -3,8 +3,6 @@ $proj = $dbc->query("SELECT * FROM projects JOIN files ON projects.photo = files
 $stud = new student($proj['cuid']);
 ?>
 
-<link rel="stylesheet" type="text/css" href="../css/project.css"/>
-
 <h2 class="singleProjectTitle"><?php echo $proj['title']; ?></h2>
 <h3 class="projectSchool">Engineering</h3>
 
