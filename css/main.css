@@ -518,3 +518,9 @@ ul.alumni span{
 	height: 120px;
 	overflow: hidden;
 }
+
+/* New Project */
+
+.addrow,.delrow {
+	cursor:pointer;
+}

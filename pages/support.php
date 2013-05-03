@@ -24,7 +24,7 @@
 				<h2>Donate to Student Scholarships (Coming Soon)</h2>
 				<p>We're working on a solution that will allow us to take donations to go specifically to a fund designated for student scholarships.  In the meantime, sign up for our newsletter and find out when this feature will be available!</p>
 			</div>
-			<div class="support-box" style="margin-top:50px">
+			<div class="support-box" style="margin-top:50px;font-size:14px">
 				<h2>Our Team</h2>
 				<p>This website was created in four days as a collaborative effort by students from the Engineering and Art School.</p>
 				<p>
