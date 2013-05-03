@@ -14,11 +14,15 @@ $(document).ready(function() {
 			buff.push("."+$(this).val());
 		})
 		var filter = buff.length ? buff.join(', ') : ".nothing";
-		console.log(buff);
 		$("#all_projects").isotope({ filter: filter });
 	});
-	$("#all_projects").on("click",".student_project", function() {
-		window.location = '/project/'+$(this).attr('pid');
+	$("#all_projects").on("click",".student_project", function(element) {
+		/*
+		if($($(element)[0].target).hasClass('img-showcase-crop'))
+			openPic($($(element)[0].target));
+		else
+		*/
+			window.location = '/project/'+$(this).attr('pid');
 	}).on("mouseenter",".student_project", function(){
 		$(this).addClass('highlight-project');
 	}).on("mouseleave",".student_project", function(){
@@ -29,13 +33,17 @@ $(document).ready(function() {
 function getProjects() {
 	$.getJSON('/data/projectsx', function(data) {
 		$.each(data, function() {
-			var newdiv = "<div pid='"+this.id+"' class='student_project "+this.school+"'>";
+			var newdiv = "<div pid='"+this.id+"' class='student_project box "+this.school+"'>";
 			newdiv += "<div class='img-showcase-crop' style='background-image:url(\"http://whycooper.org/users/"+this.cuid+"/uploads/t/"+this.photo+"\");'></div>";
 			newdiv += "<h4>"+this.title+"</h4></a>";
 			newdiv += "<p>by "+this.student+"</p>";
 			$("#all_projects").append(newdiv+"</div>");
-			console.log(this);
 		});
 		$("#all_projects").isotope(options);
 	});
+}
+
+function openPic(test) {
+	var url = $(test)[0].style.background.slice(4,-1);
+	Messi.img(url);
 }

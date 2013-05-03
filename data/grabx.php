@@ -1,10 +1,12 @@
 <?php
 $s = $_SESSION['cuid'];
-$res = $dbc->query("SELECT projects.id,projects.cuid,name FROM projects JOIN files ON projects.photo = files.id WHERE projects.id = 8");
+$res = $dbc->query("SELECT projects.id,projects.cuid,name FROM projects JOIN files ON projects.photo = files.id WHERE projects.id >=9");
 while($r = $res->fetch_assoc()) {
 	$_SESSION['cuid'] = $r['cuid'];
 	print_r($r);
-	make_thumb2($r['name'],270,'png');
+	$fil = explode(".",$r['name']);
+	echo '<br/>';
+	make_thumb2($r['name'],270,$fil[1]);
 }
 $_SESSION['cuid'] = $s;
 

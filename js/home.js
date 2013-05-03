@@ -19,7 +19,13 @@ $(document).ready(function() {
 	    delay               : 4000, 
 	    resumeDelay         : 4000, 
 	    animationTime       : 500,
-	    navigationFormatter : function(i,p){ return p.attr('data-title'); }
+	    navigationFormatter : function(i,p){ return p.attr('data-title'); },
+	    onSlideBegin : function(event, slider){
+	    	$(".panel").not(slider.$currentPage).find('.caption').hide();
+			},
+		onSlideComplete : function(slider){
+			slider.$currentPage.find('.caption').fadeIn(500);
+ 			}
    	});
 
 	getProjects();

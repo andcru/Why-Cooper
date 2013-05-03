@@ -5,6 +5,8 @@
         <script src="/js/jquery-1.8.0.min.js"></script>
         <script src="/js/isotope/jquery.isotope.min.js"></script>
         <script src="/js/jquery.anythingslider.min.js"></script>
+        <script src="/js/jquery.dotdotdot-1.5.7-packed.js"></script>
+        <script src="/js/messi.js"></script>
 <?php if(file_exists($_SERVER['DOCUMENT_ROOT'].'/js/'.$_GET['p'].'.js')) echo sprintf("\t<script src=\"/js/%s.js\"></script>\n",$_GET['p']) ?>
         <script src="//use.typekit.net/xcq2zay.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
@@ -19,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <link rel="stylesheet" type="text/css" href="/css/isotope.css">
         <link rel="stylesheet" type="text/css" href="/css/theme-minimalist-round.css">
+        <link rel="stylesheet" type="text/css" href="/css/messi.min.css" />
     </head>
     <body>
         <div class="wrapper">

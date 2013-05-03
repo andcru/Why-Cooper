@@ -85,13 +85,13 @@
 
 /* Navigation buttons, active state */
 .anythingSlider-minimalist-round.activeSlider .anythingControls a {
-	background-color: #666;
+	background-color: #fff;
 	color: #fff;
 }
 /* Navigation current button, active state */
 .anythingSlider-minimalist-round.activeSlider .anythingControls a.cur,
 .anythingSlider-minimalist-round.activeSlider .anythingControls a:hover {
-	background-color: #eee;
+	background-color: red;
 	color: #000;
 }
 

@@ -1,0 +1,51 @@
+.singleProjectTitle {
+	color: green;
+}
+
+.projectSchool {
+	float: right;
+	margin-top: -30px;
+}
+
+.projectMainContent {
+	position: relative;
+	margin: auto;
+	width: 700px;
+	background-color: #d9d9d9;
+}
+
+.projectImage {
+	padding: 20px 20px 0 20px;
+	position: relative;
+	left: 50%;
+	margin-left: -270px;
+
+}
+
+.projectDescription {
+	padding: 20px;
+}
+
+.suggestedProjectContent {
+	margin: auto;
+	position: relative;
+	width: 935px;
+	height: 230px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: black;
+
+}
+
+.suggestedProject {
+	position:relative;
+	float: left;
+	padding: 20px;
+	margin: 20px 0px 20px 20px;
+	width: 250px;
+	height: 150px;
+	background-color: #d9d9d9;
+}
+
+.suggestedProjectImage {
+}

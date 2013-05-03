@@ -8,7 +8,7 @@
                 <li><a href="/projects"    class="foot-link">Projects</a></li>
                 <li><a href="/featured"    class="foot-link">Featured</a></li>
                 <li><a href="/experiences" class="foot-link">Experiences</a></li>
-                <li><a href="/support"     class="foot-link">Support Us</a></li>
+                <li><a href="/support"     class="foot-link"><span>Support Us</span></a></li>
 
             </ul>
         </div>

@@ -1,0 +1,74 @@
+#leftWrapper {
+	width: 600px;
+
+	padding: 20px;
+	margin: 0;
+	border-color: gainsboro;
+	border-right-style: solid;
+	border-width: 2px;
+}
+
+.moveUp {
+	margin-top: -20px;
+}
+
+.innerLeftWrapper {
+	margin-top: 100px;
+	position: relative;
+	/*border-style: solid;
+	border-width: 1px;
+	border-color: red;*/
+}
+
+.featured{
+	position: absolute;
+	float: left;
+	min-height:110px;
+	width:240px;
+	padding:15px;
+	margin:10px;
+	background-color:#d9d9d9;
+	cursor:pointer;
+}
+
+.Events {
+	color: white;
+	background-color: #38ACEC;
+}
+
+
+#mainInfo {
+	position: absolute;
+	width: 400px;
+}
+
+#columnFarRight {
+	height: 600px;
+	width: 275px;
+	padding-top: 30px;
+	float: right;
+	
+	/*border-color: red;
+	border-style:solid;
+	border-width:5px;*/
+}
+
+#insideRightColumn {
+	height: 600px;
+	background-color: gainsboro;
+
+}
+
+.alumniName {
+	font-family: franklin-gothic-urw-cond;
+	font-weight: normal;
+	font-size:16px;
+	color: #38ACEC;
+	text-decoration:underline
+}
+
+ul.alumni {
+	font-size:14px;
+	list-style:none;
+	padding: 20px;
+}
