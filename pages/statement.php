@@ -5,7 +5,7 @@
 
 <p>The Cooper Union was founded by Peter Cooper (philanthropist, inventor, and visionary) on the principle that education should be "free as air and water". The school has been able to offer a full tuition scholarship for all incoming students since 1902. This policy changed on Tuesday, April 23rd, 2013 at 12:17 pm, when the Board of Trustees announced the end of the full tuition policy.</p>
 
-<p>The success of the school is deeply rooted in the principle of free access to education for all. It's something that shapes us and has allows us to be everything we can be. We believe that a free Cooper is worth saving, and here is why:</p>
+<p>The success of the school is deeply rooted in the principle of free access to education for all. It's something that shapes us and allows us to be everything we can be. We believe that a free Cooper is worth saving, and here is why:</p>
 
 <b><i>"True meritocracy"</i></b>
 <p>A full tuition scholarship is the only undeniably need-blind acceptance policy. Cooper Union provides opportunity for all students, including those who cannot afford the price tag associated with higher education yet also cannot reap the benefits of financial aid. The school brings together and develops the talent that would otherwise go unnoticed. It is one of the few remaining schools that can say: "It does not matter to us where you come from or who your parents are. Here is an exceptional education: come and get it."</p>

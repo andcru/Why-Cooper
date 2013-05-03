@@ -8,7 +8,7 @@ $stud = new student($proj['cuid']);
 <h2 class="singleProjectTitle"><?php echo $proj['title']; ?></h2>
 <h3 class="projectSchool">Engineering</h3>
 
-<p>Project by:<a href="whycooper.org/student"> <?php echo $stud->name(); ?></a></h2>
+<p>Project by: <a href=""><?php echo $stud->name(); ?></a></h2>
 
 <div class="projectMainContent">
 	<p><img class="projectImage" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>" width="500px"></p>
@@ -20,9 +20,11 @@ $stud = new student($proj['cuid']);
 
 </div>
 
-
+<!--
 <div class="suggestedProjectContent">
-	<div class="suggestedProject"><img class="suggestedProjectImage" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>" width="200px" height="100px"><h2>Project 1</h2></div>
-	<div class="suggestedProject"><img class="suggestedProjectImage" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>" width="200px" height="100px"><h2>Project 2</h2></div>
-	<div class="suggestedProject"><img class="suggestedProjectImage" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>" width="200px" height="100px"><h2>Project 3</h2></div>
+	<div class="similarProjectTitle">CHECK OUT SOME SIMILAR PROJECTS</div>
+	<div class="suggestedProject"><div class="imageContainer"><img class="suggestedProjectImage crop" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>"/></div><h2>Project 1</h2><p class="suggestedProjectDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
+	<div class="suggestedProject"><div class="imageContainer"><img class="suggestedProjectImage crop" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>"/></div><h2>Project 2</h2><p class="suggestedProjectDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
+	<div class="suggestedProject"><div class="imageContainer"><img class="suggestedProjectImage crop" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>"/></div><h2>Project 3</h2><p class="suggestedProjectDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
 </div>
+-->
