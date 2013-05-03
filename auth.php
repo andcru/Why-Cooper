@@ -5,8 +5,10 @@ if(is_numeric($pg[sizeof($pg)-1])) {
 	$pg_id = array_pop($pg);
 	$_GET['p'] = implode("/",$pg);
 }
-if(!$pg[0])
+if(!$pg[0]) {
+	$pg[0] = 'home';
 	$_GET['p'] = 'home';
+}
 
 // Check if they are in a bad area
 if($pg[0] == 'admin' && !isset($_SESSION['cuid'])) {
