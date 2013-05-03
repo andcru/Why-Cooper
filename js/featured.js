@@ -8,6 +8,9 @@ var options = {
 		}};
 $(document).ready(function() {
 	getFeatured();
+	$("#all_featured").on("click",".box-link", function() {
+		window.open($(this).find("a").attr('href'),'_blank');
+	});
 	$("#type_selects").on("click","li", function() {
 		var buff = [];
 		$('.sel_type:checked').each(function(){
@@ -32,7 +35,7 @@ function getFeatured() {
 				this.title += this.club;
 				col = 'Events';
 			}
-			var newdiv = "<div pid='"+this.id+"' class='featured box box-thin "+ col + " " + this.featured +"'>";
+			var newdiv = "<div pid='"+this.id+"' class='featured box box-thin box-link "+ col + " " + this.featured +"'>";
 			newdiv += "<h2>"+this.title+"</h2></a>";
 			newdiv += "<p class='trunc feat-body'>"+this.preview+"</p>";
 			newdiv += "<p class='feat-datelink'>"+this.pub_date+" | <a href=\"" + url + "\">More Info</a></p>";

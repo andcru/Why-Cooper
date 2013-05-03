@@ -7,7 +7,7 @@ while($r = $res->fetch_assoc()) {
 	$news[] = $r;
 	$sort[] = strtotime($r['pub_date']);
 }
-$res = $dbc->query("SELECT id,event AS title,club,details AS preview,req_id,starttime FROM events ORDER BY endtime DESC LIMIT {$entries}");
+$res = $dbc->query("SELECT id,event AS title,club,details AS preview,req_id,starttime FROM events WHERE ranking>0 ORDER BY endtime DESC LIMIT {$entries}");
 while($r = $res->fetch_assoc()) {
 	$r['pub_date'] = date("F j, Y",strtotime($r['starttime']));
 	$news[] = $r;
