@@ -1,12 +1,19 @@
 <?php
 $proj = $dbc->query("SELECT * FROM projects JOIN files ON projects.photo = files.id WHERE projects.id='{$pg_id}'")->fetch_assoc();
-$stud = new student($proj['cuid']);
+$stud[] = new student($proj['cuid']);
+if($proj['members']) {
+	$mem = explode(",",$proj['members']);
+	foreach($mem as $cuid)
+		$stud[] = new student($cuid);
+}
+foreach($stud as $p)
+	$line[] = sprintf("<a href=''>%s</a>",$p->name());
 ?>
 
 <h2 class="singleProjectTitle"><?php echo $proj['title']; ?></h2>
 <h3 class="projectSchool">Engineering</h3>
 
-<p>Project by: <a href=""><?php echo $stud->name(); ?></a></h2>
+<p>Project by: <a href=""><?php echo implode(", ",$line); ?></a></h2>
 
 <div class="projectMainContent">
 	<p><img class="projectImage" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>" width="500px"></p>
