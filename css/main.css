@@ -214,7 +214,10 @@ div.img-feat-crop{
 	padding:15px;
 	margin:10px;
 	background:#d9d9d9;
-	cursor:pointer;
+	transition: background-color .5s
+}
+.box-link{
+	cursor:pointer
 }
 .box-short{
 	min-height:75px;
@@ -428,9 +431,11 @@ ul.alumni span{
 }
 
 .testimonial_input {
-	width:100%;
+	width:270px;
 	height:180px;
 	resize: none;
+	padding:4px;
+	margin: -5px;
 }
 
 .login-box {

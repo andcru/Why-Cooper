@@ -18,7 +18,7 @@
 				<h2>Sign Up for Our Newsletter</h2>
 				<p>Send us your email to be notified when our donation page goes live and to receive occassional emails about updates to WhyCooper.org</p>
 				<form method="POST" action="/emailx">
-				<center>Email: <input type="text" name="email"> <input type="Submit"></center>
+				<center>Email: <input type="text" name="email"> <input type="submit" value="Submit"></center>
 			</div>
 			<div class="support-box">
 				<h2>Donate to Student Scholarships (Coming Soon)</h2>

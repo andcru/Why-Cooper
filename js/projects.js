@@ -33,7 +33,7 @@ $(document).ready(function() {
 function getProjects() {
 	$.getJSON('/data/projectsx', function(data) {
 		$.each(data, function() {
-			var newdiv = "<div pid='"+this.id+"' class='student_project box "+this.school+"'>";
+			var newdiv = "<div pid='"+this.id+"' class='student_project box box-link "+this.school+"'>";
 			newdiv += "<div class='img-showcase-crop' style='background-image:url(\"http://whycooper.org/users/"+this.cuid+"/uploads/t/"+this.photo+"\");'></div>";
 			newdiv += "<h4>"+this.title+"</h4></a>";
 			newdiv += "<p>by "+this.student+"</p>";
