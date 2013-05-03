@@ -7,8 +7,10 @@
 	</ul>
 </div>
 
-<h1>Project Showcase</h1>
-<p>Curious to see how Cooper Union students use their free education?</p>
-<p>Browse projects made by students and alumni from all three schools.</p>
+<div>
+	<h1>Project Showcase</h1>
+	<p>Curious to see how Cooper Union students use their free education? Browse projects made by students and alumni from all three schools.</p>
+	<p>Members of the school community: <a href="/login">Login</a> to submit your Cooper Experience!</p>
+</div>
 
 <div id="all_projects" style=""></div>
