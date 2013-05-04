@@ -45,6 +45,7 @@ function getFeatured() {
 		$.each(data.alumni, function() {
 			$("ul.alumni").append('<li><a class="alumniName" href="'+makeURL(this.link)+'">'+this.name+'</a> - <span> '+this.description+'</span></li>');
 		});
+		$("ul.alumni").append('<a class="readmore" href="http://www.cualumni.com/s/1289/indexNoRtcol.aspx?sid=1289&gid=1&pgid=461">view more</a>');
 		$(".trunc").dotdotdot();
 		$("#all_featured").isotope(options);
 	});
