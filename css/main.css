@@ -541,3 +541,7 @@ ul.alumni span{
 .addrow,.delrow {
 	cursor:pointer;
 }
+
+input.med_len {
+	width:300px;
+}
