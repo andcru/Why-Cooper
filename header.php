@@ -31,7 +31,7 @@
         <div class="container" id="header">
             <img src="/img/head.png">
             <ul>
-                <li><a href="/home"        class="nav-link">Home</a></li>
+                <li><a href="/"            class="nav-link">Home</a></li>
                 <li><a href="/statement"   class="nav-link">Statement</a></li>
                 <li><a href="/projects"    class="nav-link">Projects</a></li>
                 <li><a href="/featured"    class="nav-link">Featured</a></li>

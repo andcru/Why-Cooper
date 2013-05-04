@@ -11,7 +11,7 @@ foreach($stud as $p)
 ?>
 
 <h2 class="singleProjectTitle"><?php echo $proj['title']; ?></h2>
-<h3 class="projectSchool">Engineering</h3>
+<h3 class="projectSchool"><?php echo $stud[0]->school(); ?></h3>
 
 <p>Project by: <a href=""><?php echo implode(", ",$line); ?></a></h2>
 
