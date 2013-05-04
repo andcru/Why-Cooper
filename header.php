@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="google-site-verification" content="DJLjevOIDrSoUIQuPJxasOLE0fVWWaGIyKmrwD-WHrs" />
         <title>Why Cooper Union?</title>
         <script src="/js/jquery-1.8.0.min.js"></script>
         <script src="/js/isotope/jquery.isotope.min.js"></script>
