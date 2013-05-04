@@ -53,7 +53,8 @@ if(@$arr) {
 
 	$stmt = $dbc->prepare("INSERT INTO files (cuid,name,image) VALUES (?,?,?)");
 	$stmt->bind_param('ssd',$_SESSION['cuid'],$arr['name'],$image);
-	$stmt->execute();
+	if(!$stmt->execute())
+		die('Execution failed: ('.$stmt->errno.') '.$stmt->error);
 
 	if(substr($_SERVER['HTTP_REFERER'],-5,1)=='m' && !$image) {
 		die('This file is not an image... but we uploaded it anyway.');

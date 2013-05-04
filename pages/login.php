@@ -1,17 +1,20 @@
 <h1>Student Login Page</h1>
 
-<h3>Use your Webmail credentials to login.</h3>
+<h3>Students: Use your Webmail credentials to login.</h3>
 
 <form method="POST" id="login" action="/loginx">
 
-<label for="user">CuID:</label>
-	<label for="pass" style="margin-left: 112px">Password:</label><br/>
-
-
-	<input type="text" name="user" style="width:100px;margin-right:50px" tabindex="1">
-
-<input type="password" name="pass" tabindex="2">
+<table>
+	<tr>
+		<td><label for="user">CuID:</label></td>
+		<td><input type="text" name="user" tabindex="1"></td>
+	</tr>
+	<tr>
+		<td><label for="pass">Password:</label></td>
+		<td><input type="password" name="pass" tabindex="2"></td>
+	</tr>
+</table>
 
 <input type="submit" value="Submit" tabindex="3">
 <br/><br/>
-<p><b>Note: </b>If you are a member of the Cooper community but do not have a current Webmail account, please contact accounts@whycooper.org and we will create accounts on a case-by-case basis.</p>
+<p><b>Alumni: </b>If you do not have a current Cooper Webmail account, you may create an account for this website at <a href="/register">http://whycooper.org/register</a> and login with those credentials.</p>

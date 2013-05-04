@@ -7,6 +7,7 @@ if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
 $qry = "INSERT INTO emails (email) VALUES (?)";
 $stmt = $dbc->prepare($qry);
 $stmt->bind_param('s',$_POST['email']);
-$stmt->execute();
+if(!$stmt->execute())
+	exit_no('Execution failed: ('.$stmt->errno.') '.$stmt->error);
 
 exit_yes('Email address "'.$_POST['email'].'" successfully added!');

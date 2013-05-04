@@ -119,3 +119,8 @@ function createfolders() {
 		mkdir($user_root . 'uploads/i/',0777);
 	}
 }
+
+function dbexist($table,$column,$item) {
+	GLOBAL $dbc;
+	return $dbc->query("SELECT * FROM {$table} WHERE {$column} = '{$item}'")->num_rows;
+}
