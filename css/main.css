@@ -159,14 +159,16 @@ a.foot-link:hover span{
 	color:white;
 }
 
-ul.suc {
+div.Success {
 	font-weight:bold;
 	color: #00cc22;
+	margin-bottom:20px;
 }
 
-ul.err {
+div.Error {
 	font-weight:bold;
 	color: #cc0000;
+	margin-bottom:20px;
 }
 
 /* Utility Classes */
@@ -292,7 +294,7 @@ div.img-feat-crop{
 	bottom:0;
 }
 
-/* Showcase */
+/* Projects */
 #all_projects{
 	position:relative;
 	width:960px;
@@ -346,6 +348,11 @@ ul.navlist label{
 ul.navlist label:hover, ul.navlist input:hover{
 	background-color:#ddd;
 	cursor:pointer;
+}
+
+.fb-like{
+    height: 20px;
+    overflow: hidden;
 }
 
 

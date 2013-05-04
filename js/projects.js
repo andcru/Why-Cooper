@@ -43,7 +43,7 @@ function getProjects() {
 			var newdiv = "<div pid='"+this.id+"' class='student_project box box-link "+this.school+"'>";
 			newdiv += "<div class='img-showcase-crop' style='background-image:url(\"http://whycooper.org/users/"+this.cuid+"/uploads/t/"+this.photo+"\");'></div>";
 			newdiv += "<h4>"+this.title+"</h4></a>";
-			newdiv += "<p>"+this.student+"</p>";
+			newdiv += "<p>"+this.student+'</p>';
 			$("#all_projects").append(newdiv+"</div>");
 		});
 		$("#all_projects").isotope(options);

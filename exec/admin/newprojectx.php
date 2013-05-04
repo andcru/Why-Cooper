@@ -28,6 +28,7 @@ if(!$dbc->query("SELECT id FROM files WHERE id='{$main_photo}' AND image=1")->nu
 $qry = "INSERT INTO projects (title,content,photo,cuid,members) VALUES (?,?,?,?,?)";
 $stmt = $dbc->prepare($qry);
 $stmt->bind_param('ssdss',$r['title'],$r['page'],$main_photo,$_SESSION['cuid'],$r['members']);
-$stmt->execute();
+if(!$stmt->execute())
+	exit_no('Execution failed: ('.$stmt->errno.') '.$stmt->error);
 
 exit_yes('Page submitted successfully!',"/admin/home");

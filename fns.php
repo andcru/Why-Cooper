@@ -5,8 +5,7 @@ function notblank($arr,$except='',$msg='') {
 	$rd = $red ? $red : $_SERVER['HTTP_REFERER'];
 	foreach($arr as $key => $value) {
 		if((!$value||$value==""||$value=="NULL")&&!@in_array($key,$except)) {
-			$errmsg_arr[] = 'You must fill out all required fields';
-			$_SESSION['msg']['err'] = $errmsg_arr;
+			$_SESSION['msg']['Error'][] = 'You must fill out all required fields';
 			session_write_close();
 			if(!$msg)
 				header('location: '.$rd);
@@ -31,7 +30,7 @@ function exit_no($msg='',$red='') {
 		$errflag = true;
 	}
 	if($errflag) {
-		$_SESSION['msg']['err'] = $errmsg_arr;
+		$_SESSION['msg']['Error'] = $errmsg_arr;
 		session_write_close();
 		header('location: '.$rd);
 		exit();
@@ -41,7 +40,7 @@ function exit_no($msg='',$red='') {
 function exit_yes($msg='',$red='') {
 	GLOBAL $rdr;
 	$rd = $red ? $red : $_SERVER['HTTP_REFERER'];
-	$_SESSION['msg']['suc'][] = $msg;
+	$_SESSION['msg']['Success'][] = $msg;
 	session_write_close();
 	header('location: '.$rd);
 	exit();
