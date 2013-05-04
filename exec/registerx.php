@@ -12,8 +12,8 @@ if($_POST['pass1'] !== $_POST['pass2'])
 if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
 	exit_no('You must enter a valid email address.');
 
-if(strlen($_POST['cuid']) < 3 || strlen($_POST['cuid'] > 6))
-	exit_no('Your username must be between 3 and 6 characters long.');
+if(strlen($_POST['cuid']) < 3 || strlen($_POST['cuid']) > 7)
+	exit_no('Your username must be between 3 and 7 characters long.');
 
 if((new student($_POST['cuid']))->valid || dbexist('users','cuid',$_POST['cuid']))
 	exit_no('The username "'.$_POST['cuid'].'" is already registered.');
@@ -32,7 +32,5 @@ $stmt = $dbc->prepare($qry);
 $stmt->bind_param('sssdd',$_POST['fname'],$_POST['lname'],$cuid,$_POST['major'],$_POST['year']);
 if(!$stmt->execute())
 	exit_no('Execution failed: ('.$stmt->errno.') '.$stmt->error);
-
-
 
 exit_yes('You have successfully registered!','/login');
