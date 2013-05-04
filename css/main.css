@@ -172,10 +172,10 @@ div.Error {
 }
 
 /* Utility Classes */
-.pull-right {
+.pull-right, .float_right{
 	float:right;
 }
-.pull-left {
+.pull-left, .float_left{
 	float:left;
 }
 .hl-red{
@@ -470,10 +470,10 @@ ul.alumni span{
 .projectMainContent {
 	padding: 20px;
 	position: relative;
-	margin: auto;
-	margin-top: 20px;
+	margin: 20px auto;
 	width: 700px;
 	background-color: #F0F0F0;
+	overflow:hidden;
 }
 
 .projectImage {
@@ -484,6 +484,7 @@ ul.alumni span{
 }
 
 .projectDescription {
+
 }
 
 .suggestedProjectContent {
