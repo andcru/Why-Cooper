@@ -172,10 +172,10 @@ div.Error {
 }
 
 /* Utility Classes */
-.pull-right{
+.pull-right, .float_right{
 	float:right;
 }
-.pull-left{
+.pull-left, .float_left{
 	float:left;
 }
 .hl-red{

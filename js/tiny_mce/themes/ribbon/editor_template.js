@@ -77,6 +77,8 @@
 
 		init : function(ed, url) {
 			var t = this, s, v, o;
+
+
 	
 			t.editor = ed;
 			t.url = url;
@@ -189,6 +191,9 @@
 
 				if (ed.settings.content_css !== false)
 					ed.dom.loadCSS(ed.baseURI.toAbsolute(url + "/skins/" + ed.settings.skin + "/content.css"));
+
+				tinymce.ScriptLoader.load(url+"/skins/" + ed.settings.skin + "/fontload.js");
+
 			});
 
 			ed.onSetProgressState.add(function(ed, b, ti) {
