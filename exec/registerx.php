@@ -33,4 +33,6 @@ $stmt->bind_param('sssdd',$_POST['fname'],$_POST['lname'],$cuid,$_POST['major'],
 if(!$stmt->execute())
 	exit_no('Execution failed: ('.$stmt->errno.') '.$stmt->error);
 
-exit_yes('You have successfully registered!');
+
+
+exit_yes('You have successfully registered!','/login');
