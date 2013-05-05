@@ -7,13 +7,13 @@ if($proj['members']) {
 		$stud[] = new student($cuid);
 }
 foreach($stud as $p)
-	$line[] = sprintf("<a href=''>%s</a>",$p->name());
+	$line[] = $p->name();
 ?>
 
 <h2 class="singleProjectTitle"><?php echo $proj['title']; ?></h2>
 <h3 class="projectSchool"><?php echo $stud[0]->school(); ?></h3>
 
-<p>Project by: <a href=""><?php echo implode(", ",$line); ?></a></h2>
+<p>Project by: <?php echo implode(", ",$line); ?></h2>
 
 <div class="projectMainContent">
 	<p><img class="projectImage" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>" width="500px"></p>

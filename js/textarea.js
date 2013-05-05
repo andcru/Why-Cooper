@@ -24,7 +24,7 @@ function loadMCE() {
 		external_link_list_url : "lists/link_list.js",
 		external_image_list_url : "lists/image_list.js",
 		external_media_list_url : "lists/media_list.js",
-	}).css('width','100%').css('height','20em');
+	}).css('width','700px').css('height','20em');
 }
 
 var iframe = document.getElementById('page-ifr');
