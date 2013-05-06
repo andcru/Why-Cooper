@@ -1,6 +1,5 @@
 <?php
-$limit = 50;
-$entries = isset($_GET['limit']) ? min($_GET['limit'],$limit) : $limit;
+
 $res = $dbc->query("SELECT projects.id,title,projects.cuid,name AS photo,members,ranking FROM projects JOIN files ON projects.photo = files.id WHERE ranking>0");
 while($r = $res->fetch_assoc()) {
 	$r['members'] = $r['members'] ? explode(",",$r['members']) : "";
@@ -20,4 +19,4 @@ foreach($json as $key => $val) {
 			$json[$key]['mems'][] = $stud->name().' ('.$stud->maj(0,0,1)." '".substr($stud->year,2).')';
 		}
 }
-echo json_encode($json, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
+echo json_encode($json);
