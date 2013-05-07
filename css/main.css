@@ -172,22 +172,12 @@ div.Error {
 }
 
 /* Utility Classes */
-.pull-right{
+.pull-right, .float_right{
 	float:right;
 }
-.pull-left{
+.pull-left, .float_left{
 	float:left;
 }
-
-img.float_right{
-	float:right;
-	padding:8px 0 8px 8px;
-}
-img.float_left{
-	float_left;
-	padding:8px 8px 8px 0;
-}
-
 .hl-red{
 	color: #ED1C24;
 }
@@ -488,14 +478,16 @@ ul.alumni span{
 .projectMainContent img{
 	padding:8px;
 }
+.projectMainContent img.float_right{
+	padding:8px 0 8px 8px;
+}
+.projectMainContent img.float_left{
+	padding:8px 8px 8px 0;
+}
 .projectImage {
 	position: relative;
 	left: 50%;
 	margin-left: -270px;
-
-}
-
-.projectDescription {
 
 }
 
