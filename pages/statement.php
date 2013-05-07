@@ -3,7 +3,7 @@
 <div class="statement">
 <h1>WHY A FREE COOPER UNION IS WORTH SAVING</h1>
 
-<p>The Cooper Union was founded by Peter Cooper (philanthropist, inventor, and visionary) on the principle that education should be "free as air and water". The school has been able to offer a full tuition scholarship for all incoming students since it opened its doors in 1859. This policy changed on Tuesday, April 23rd, 2013 at 12:17 pm, when the Board of Trustees announced the end of the full tuition policy.</p>
+<p>The Cooper Union was founded by Peter Cooper (philanthropist, inventor, and visionary) on the principle that education should be "free as air and water". The school has been able to offer a full tuition scholarship for all incoming students for over 150 years. This policy changed on Tuesday, April 23rd, 2013 at 12:17 pm, when the Board of Trustees announced the end of the full tuition policy.</p>
 
 <p>The success of the school is deeply rooted in the principle of free access to education for all. It's something that shapes us and allows us to be everything we can be. We believe that a free Cooper is worth saving, and here is why:</p>
 
