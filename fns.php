@@ -46,7 +46,7 @@ function exit_yes($msg='',$red='') {
 	exit();
 }
 
-function make_thumb($src, $desired_width,$ext) {
+function make_thumb($src, $desired_width,$ext,$newname = "") {
 
 	switch(strtolower($ext)) {
 		case 'jpg':
@@ -74,7 +74,7 @@ function make_thumb($src, $desired_width,$ext) {
 	
 	imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
 
-	$file = explode(".",$src);
+	$file = $newname ? explode(".",$newname) : explode(".",$src);
 	
 	$save_fn($virtual_image, $_SERVER['DOCUMENT_ROOT']. '/users/' . $_SESSION['cuid'] .'/uploads/t/' . $file['0'] .'.'. $file['1']);
 }

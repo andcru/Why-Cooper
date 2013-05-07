@@ -8,6 +8,7 @@ if($proj['members']) {
 }
 foreach($stud as $p)
 	$line[] = $p->name();
+$pic = explode(".",$proj['name']);
 ?>
 
 <h2 class="singleProjectTitle"><?php echo $proj['title']; ?></h2>
@@ -16,7 +17,7 @@ foreach($stud as $p)
 <p>Project by: <?php echo implode(", ",$line); ?></h2>
 
 <div class="projectMainContent">
-	<p><img class="projectImage" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/<?php echo $proj['name']; ?>" width="500px"></p>
+	<p><img class="projectImage" src="http://whycooper.org/users/<?php echo $proj['cuid']; ?>/uploads/t/<?php echo $pic[0]."_.".$pic[1]; ?>" width="500px"></p>
 	
 	<div class="projectDescription">
 		<p>Project Description:</p>

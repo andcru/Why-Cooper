@@ -39,11 +39,13 @@ if(@$arr) {
 	$image = 0;
 	if(in_array(strtolower($file[1]),$img_ext)) {
 		$size = getimagesize($_SERVER['DOCUMENT_ROOT'] . '/users/' . $_SESSION['cuid'] .'/uploads/' . $arr['name']);
-		if($cont)
+		if($cont) {
 			if($size[0] / $size[1] >= 270/140)
 				$w = 140 * $size[0] / $size[1];
 			else
 				$w = 270;
+			make_thumb($arr['name'],"500",$file[1],$file[0]."_.".$file[1]);
+		}
 		else
 			$w = 75;
 		make_thumb($arr['name'],$w,$file[1]);
