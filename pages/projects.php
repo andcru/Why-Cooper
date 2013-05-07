@@ -14,3 +14,5 @@
 </div>
 
 <div id="all_projects" style=""></div>
+
+<div id="view_more"><center><a href="javascript:void(0)" class="readmore" id="readmore">View more</a></center></div>

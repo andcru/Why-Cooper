@@ -5,7 +5,9 @@ var options = {
 	    	duration: 750,
 	    	easing: 'linear',
 	    	queue: false
-		}};
+		},
+		filter: ".First"
+	};
 $(document).ready(function() {
 	getProjects();
 	$("#school_selects").on("click",".sel_school", function() {
@@ -15,6 +17,7 @@ $(document).ready(function() {
 		})
 		var filter = buff.length ? buff.join(', ') : ".nothing";
 		$("#all_projects").isotope({ filter: filter });
+		$(".readmore").hide();
 	});
 	$("#all_projects").on("click",".student_project", function(element) {
 		/*
@@ -28,19 +31,24 @@ $(document).ready(function() {
 	}).on("mouseleave",".student_project", function(){
 		$(this).removeClass('highlight-project');
 	});
+	$(".readmore").on('click', function() {
+		$(this).hide();
+		$("#all_projects").isotope({ filter: ".student_project" });
+	});
 });
 
 function getProjects() {
 	$.getJSON('/data/projectsx', function(data) {
+		var cnt = 0, text = "First", limit = 10;
 		$.each(data, function() {
-			if(typeof(this.mems) !== "undefined") {
+			text = (cnt++ < limit) ? text : "";
+			if(typeof(this.mems) !== "undefined")
 				if(this.mems.length ==1)
 					this.student += "<br/>"+this.mems[0];
 				else
 					this.student += "<br/>and <span class='tooltip' title=\""+this.mems.join("&#013;")+"\">"+this.mems.length+" others</span>";
-			}
-				console.log(this.mems);
-			var newdiv = "<div pid='"+this.id+"' class='student_project box box-link "+this.school+"'>";
+			console.log(this.mems);
+			var newdiv = "<div pid='"+this.id+"' class='student_project box box-link "+this.school+" "+text+"'>";
 			newdiv += "<div class='img-showcase-crop' style='background-image:url(\"http://whycooper.org/users/"+this.cuid+"/uploads/t/"+this.photo+"\");'></div>";
 			newdiv += "<h4>"+this.title+"</h4></a>";
 			newdiv += "<p>"+this.student+'</p>';
