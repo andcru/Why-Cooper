@@ -172,12 +172,22 @@ div.Error {
 }
 
 /* Utility Classes */
-.pull-right, .float_right{
+.pull-right{
 	float:right;
 }
-.pull-left, .float_left{
+.pull-left{
 	float:left;
 }
+
+img.float_right{
+	float:right;
+	padding:8px 0 8px 8px;
+}
+img.float_left{
+	float_left;
+	padding:8px 8px 8px 0;
+}
+
 .hl-red{
 	color: #ED1C24;
 }
@@ -475,7 +485,9 @@ ul.alumni span{
 	background-color: #F0F0F0;
 	overflow:hidden;
 }
-
+.projectMainContent img{
+	padding:8px;
+}
 .projectImage {
 	position: relative;
 	left: 50%;
