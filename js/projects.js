@@ -47,8 +47,7 @@ function getProjects() {
 					this.student += "<br/>"+this.mems[0];
 				else
 					this.student += "<br/>and <span class='tooltip' title=\""+this.mems.join("&#013;")+"\">"+this.mems.length+" others</span>";
-			console.log(this.mems);
-			var newdiv = "<div pid='"+this.id+"' class='student_project box box-link "+this.school+" "+text+"'>";
+			var newdiv = "<div pid='"+this.id+"' class='student_project box box-link "+this.school.join(" ")+" "+text+"'>";
 			newdiv += "<div class='img-showcase-crop' style='background-image:url(\"http://whycooper.org/users/"+this.cuid+"/uploads/t/"+this.photo+"\");'></div>";
 			newdiv += "<h4>"+this.title+"</h4></a>";
 			newdiv += "<p>"+this.student+'</p>';

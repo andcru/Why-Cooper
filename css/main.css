@@ -92,7 +92,7 @@ a.readmore:after{
 	padding:0;
 	margin:0;
 	height:45px;
-	width:163.333333px; /* width = 980/number of list elements */
+	width:140px; /* width = 980/number of list elements */
 }
 a.nav-link{
 	display:block;
@@ -131,7 +131,7 @@ a.nav-link:hover{
 	padding:0;
 	margin:0;
 	height:53px;
-	width:140px;
+	width:122.5px;
 }
 a.foot-link{
 	position:absolute;
@@ -478,7 +478,7 @@ ul.alumni span{
 .projectMainContent img{
 	padding:8px;
 }
-.projectMainContent img.float_right{
+.projectMainContentimg.float_right{
 	padding:8px 0 8px 8px;
 }
 .projectMainContent img.float_left{

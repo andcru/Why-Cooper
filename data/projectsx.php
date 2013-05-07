@@ -11,12 +11,15 @@ $json = array_slice($json,0,$entries);
 
 foreach($json as $key => $val) {
 	$stud = new student($val['cuid']);
-	$json[$key]['school'][$stud->school()] =1;
+	$json[$key]['school'][] = $stud->school();
 	$json[$key]['student'] = $stud->name().' ('.$stud->maj(0,0,1)." '".substr($stud->year,2).')';
-	if(is_array($val['members']))
+	if(is_array($val['members'])) {
 		foreach($val['members'] as $cuid) {
 			$stud = new student($cuid);
 			$json[$key]['mems'][] = $stud->name().' ('.$stud->maj(0,0,1)." '".substr($stud->year,2).')';
+			if(!in_array($stud->school(),$json[$key]['school']))
+				$json[$key]['school'][] = $stud->school();
 		}
+	}
 }
 echo json_encode($json);
