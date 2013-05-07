@@ -2,7 +2,7 @@
 	<div class="home-box">
 		<h1>Check out the story of Cooper Union - as told by its students</h1>
 		<ul id="imgslider">
-			<li data-title="Image2"><div class="panel-panel"><img src="/img/slider/6.png"><!--<span class="caption">Test</span>--></div></li>
+			<li data-title="Image2"><div class="panel-panel"><a href="/img/slider/full_size/6.jpg"><img src="/img/slider/6.png"></a><!--<span class="caption">Test</span>--></div></li>
 			<li data-title="Image3"><div class="panel-panel"><img src="/img/slider/2.png"><!--<span class="caption"></span>--></div></li>
 			<li data-title="Image4"><div class="panel-panel"><img src="/img/slider/3.png"><!--<span class="caption"></span>--></div></li>
 			<li data-title="Image1"><div class="panel-panel"><img src="/img/slider/1.png"><!--<span class="caption"></span>--></div></li>
