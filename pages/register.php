@@ -33,7 +33,7 @@
 	<tr><td colspan="2">&nbsp;</td></tr>
 	<tr>
 		<td>Desired Username: </td>
-		<td><input type="text" name="cuid"> (3-7 characters)</td>
+		<td><input type="text" name="cuid"> (3+ characters)</td>
 	</tr>
 	<tr>
 		<td>Email Address: </td>

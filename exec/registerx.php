@@ -12,8 +12,8 @@ if($_POST['pass1'] !== $_POST['pass2'])
 if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
 	exit_no('You must enter a valid email address.');
 
-if(strlen($_POST['cuid']) < 3 || strlen($_POST['cuid']) > 7)
-	exit_no('Your username must be between 3 and 7 characters long.');
+if(strlen($_POST['cuid']) < 3)
+	exit_no('Your username must be at least 3 characters long.');
 
 if((new student($_POST['cuid']))->valid || dbexist('users','cuid',$_POST['cuid']))
 	exit_no('The username "'.$_POST['cuid'].'" is already registered.');
