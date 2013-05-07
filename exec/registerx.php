@@ -19,13 +19,14 @@ if((new student($_POST['cuid']))->valid || dbexist('users','cuid',$_POST['cuid']
 	exit_no('The username "'.$_POST['cuid'].'" is already registered.');
 
 $pass = hash('sha256', $_POST['pass1']);
-$cuid = "_".$_POST['cuid'];
 
 $qry = "INSERT INTO users (cuid,password,email) VALUES (?,?,?)";
 $stmt = $dbc->prepare($qry);
 $stmt->bind_param('sss',$_POST['cuid'],$pass,$_POST['email']);
 if(!$stmt->execute())
 	exit_no('Execution failed: ('.$stmt->errno.') '.$stmt->error);
+
+$cuid = "_".$stmt->insert_id;
 
 $qry = "INSERT INTO jac.students (fname,lname,cuid,major,year,section) VALUES (?,?,?,?,?,0)";
 $stmt = $dbc->prepare($qry);

@@ -3,13 +3,13 @@
 // Ensure you filled out all required fields
 notblank($_POST);
 
-$res = $dbc->query("SELECT password FROM users WHERE cuid='{$_POST['user']}' AND approved>0");
+$res = $dbc->query("SELECT id,password FROM users WHERE cuid='{$_POST['user']}' AND approved>0");
 if($res->num_rows == 1) {
 	$pass = hash('sha256', $_POST['pass']);
 	$row = $res->fetch_assoc();
 	if($pass === $row['password']) {
 		$login = 1;
-		$_POST['user'] = "_".$_POST['user'];
+		$_POST['user'] = "_".$row['id'];
 	}
 }
 if(!$login)
