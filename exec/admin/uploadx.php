@@ -44,7 +44,8 @@ if(@$arr) {
 				$w = 140 * $size[0] / $size[1];
 			else
 				$w = 270;
-			make_thumb($arr['name'],"500",$file[1],$file[0]."_.".$file[1]);
+			$fi = explode(".",$arr['name']);
+			make_thumb($arr['name'],"500",$file[1],$fi[0]."_.".$fi[1]);
 		}
 		else
 			$w = 75;

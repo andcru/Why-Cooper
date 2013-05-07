@@ -12,7 +12,7 @@
 	</div>	
 	<div class="home-box">
 		<h1>WhyCooper.org <span class="hl-gray">| Our Mission</span></h1>
-		<p>What would you do if there were a place where your economic situation didn't limit your opportunities?  What would happen if hundreds of people were put in an environment like this and their success was only determined by their own effort?  There is one last place that offers this, but you might not yet know it.  The Cooper Union for the Advancement of Science and Art is one of the last free colleges in the US.  WhyCooper.org was made to show the world what can come from such an environment and why we are so proud to be students at this institution.
+		<p>What would you do if there were a place where your economic situation didn't limit your opportunities?  What would happen if hundreds of people were put in an environment like this and their success was only determined by their own effort?  There is one last place that offers this, but you might not yet know it.  The Cooper Union for the Advancement of Science and Art is one of the last free colleges in the US.  WhyCooper.org was made to show the world what can come from such an environment and why we are so proud to be students at this institution. To learn more, please read our <a href="/statement">statement</a>.
 </p>
 	</div>
 </div><div class="home-col2"> <!--Important: do not put on new line, there must be no space between these 2 div's -->
