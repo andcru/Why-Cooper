@@ -1,10 +1,13 @@
 <?php
+$res = $dbc->query("SELECT COUNT(id) AS cnt,project FROM visits GROUP BY project");
+while($r = $res->fetch_assoc())
+	$rank[$r['project']] = $r['cnt'];
 
 $res = $dbc->query("SELECT projects.id,title,projects.cuid,name AS photo,members,ranking FROM projects JOIN files ON projects.photo = files.id WHERE ranking>0");
 while($r = $res->fetch_assoc()) {
 	$r['members'] = $r['members'] ? explode(",",$r['members']) : "";
 	$json[] = $r;
-	$weight[] = rand(0,10)*$r['ranking'];
+	$weight[] = rand(0,10)*(10+$rank[$r['id']]);
 }
 array_multisort($weight, SORT_DESC ,$json);
 $json = array_slice($json,0,$entries);

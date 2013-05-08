@@ -18,7 +18,8 @@
 </div><div class="home-col2"> <!--Important: do not put on new line, there must be no space between these 2 div's -->
 	<div class="home-box">
 		<?php
-			$proj = $dbc->query("SELECT projects.id,title,projects.cuid,name AS photo,members FROM projects JOIN files ON projects.photo = files.id ORDER BY ranking DESC, id DESC LIMIT 1")->fetch_assoc();
+			$id = $dbc->query("SELECT project, COUNT(*) AS cnt FROM visits GROUP BY project ORDER BY cnt DESC LIMIT 1")->fetch_assoc();
+			$proj = $dbc->query("SELECT projects.id,title,projects.cuid,name AS photo,members FROM projects JOIN files ON projects.photo = files.id WHERE projects.id='{$id['project']}'")->fetch_assoc();
 			$stud = new student($proj['cuid']);
 			$proj['student'] = $stud->name().' ('.$stud->maj(0,0,1).' '.$stud->year.')';
 		?>
