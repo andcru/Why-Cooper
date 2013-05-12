@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 function getProjects() {
 	$.getJSON('/data/projectsx', function(data) {
-		var cnt = 0, text = "First", limit = 10;
+		var sch = {}, cnt = 0, text = "First", limit = 10;
 		$.each(data, function() {
 			text = (cnt++ < limit) ? text : "";
 			if(typeof(this.mems) !== "undefined")
@@ -47,11 +47,15 @@ function getProjects() {
 					this.student += "<br/>"+this.mems[0];
 				else
 					this.student += "<br/>and <span class='tooltip' title=\""+this.mems.join("&#013;")+"\">"+this.mems.length+" others</span>";
+			sch[this.school[0].split(" ")[this.school[0].split(" ").length-1]] = ++sch[this.school[0].split(" ")[this.school[0].split(" ").length-1]] || 1;
 			var newdiv = "<div pid='"+this.id+"' class='student_project box box-link "+this.school.join(" ")+" "+text+"'>";
 			newdiv += "<div class='img-showcase-crop' style='background-image:url(\"http://whycooper.org/users/"+this.cuid+"/uploads/t/"+this.photo+"\");'></div>";
 			newdiv += "<h4>"+this.title+"</h4></a>";
 			newdiv += "<p>"+this.student+'</p>';
 			$("#all_projects").append(newdiv+"</div>");
+		});
+		$.each(sch, function(k,v) {
+			console.log($("label[for='"+$('.sel_school[value="'+k+'"]').attr('id')+"']").append("("+v+")"));
 		});
 		$("#all_projects").isotope(options);
 	});
