@@ -20,12 +20,7 @@ $(document).ready(function() {
 		$(".readmore").hide();
 	});
 	$("#all_projects").on("click",".student_project", function(element) {
-		/*
-		if($($(element)[0].target).hasClass('img-showcase-crop'))
-			openPic($($(element)[0].target));
-		else
-		*/
-		window.open('http://'+window.location.host+'/project/'+$(this).attr('pid'),'_blank');
+		window.open('http://'+window.location.host+'/project/'+$(this).attr('pid')+'/'+$(this).find('h4').text().split(' ').join('_'),'_blank');
 	}).on("mouseenter",".student_project", function(){
 		$(this).addClass('highlight-project');
 	}).on("mouseleave",".student_project", function(){

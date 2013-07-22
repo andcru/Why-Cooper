@@ -12,6 +12,8 @@ RewriteCond %{REQUEST_FILENAME} !/?-f?\.php$
 RewriteCond %{REQUEST_FILENAME} !/?-f?\.js\.php$
 RewriteRule ^(.+).php$ /$1 [R=301,NC]
 
+RewriteRule ^([a-zA-Z]*)/([0-9]*)/(.*)$ index.php?p=$1/$2
+
 RewriteRule ^([0-9a-zA-Z\/]*)$ index.php?p=$1 [L]
 
 php_value upload_max_filesize 500M

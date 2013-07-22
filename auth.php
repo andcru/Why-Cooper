@@ -6,6 +6,7 @@ if(is_numeric($pg[sizeof($pg)-1])) {
 	$_GET['p'] = implode("/",$pg);
 	$dbc->query("INSERT INTO visits (project) VALUES ({$pg_id})");
 }
+
 if(!$pg[0]) {
 	$pg[0] = 'home';
 	$_GET['p'] = 'home';
